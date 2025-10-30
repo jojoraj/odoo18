@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from odoo import models, fields, api
+from odoo.exceptions import UserError
 
 
 class custom_stock(models.Model):
@@ -14,3 +15,8 @@ class custom_stock(models.Model):
                     rec.has_group = True
                 else:
                     rec.has_group = False
+
+      def unlink(self):
+            if self.env.user.has_group('custom_stock.group_product_create_restriction'):
+                raise UserError("Vous n'avez pas l'autorisation de supprimer un produit.")
+            return super(ProductTemplate, self).unlink()
