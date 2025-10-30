@@ -19,4 +19,4 @@ class custom_stock(models.Model):
       def unlink(self):
             if self.env.user.has_group('custom_stock.group_product_create_restriction'):
                 raise UserError("Vous n'avez pas l'autorisation de supprimer un produit.")
-            return super(ProductTemplate, self).unlink()
+            return super().unlink()
