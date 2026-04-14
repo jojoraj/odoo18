@@ -1,0 +1,348 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* dt_payment_alma
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-04 19:53+0000\n"
+"PO-Revision-Date: 2026-03-04 19:53+0000\n"
+"Last-Translator: \n"
+"Language-Team: French\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. module: dt_payment_alma
+#. odoo-python
+#: code:addons/dt_payment_alma/models/payment_provider.py:0
+msgid "API key not configured"
+msgstr "Clé API non configurée"
+
+#. module: dt_payment_alma
+#: model:ir.model.fields.selection,name:dt_payment_alma.selection__payment_provider__code__alma
+#: model:payment.provider,name:dt_payment_alma.payment_provider_alma
+#: model_terms:ir.ui.view,arch_db:dt_payment_alma.alma_unavailable_message
+#: model_terms:ir.ui.view,arch_db:dt_payment_alma.payment_method_form_dt_payment_alma
+msgid "Alma"
+msgstr "Alma"
+
+#. module: dt_payment_alma
+#. odoo-python
+#: code:addons/dt_payment_alma/models/payment_transaction.py:0
+msgid "Alma : No transaction found matching reference %s."
+msgstr "Alma : Aucune transaction trouvée correspondant à la référence %s."
+
+#. module: dt_payment_alma
+#. odoo-python
+#: code:addons/dt_payment_alma/models/payment_provider.py:0
+msgid "Alma API key not configured."
+msgstr "Clé API Alma non configurée."
+
+#. module: dt_payment_alma
+#. odoo-python
+#: code:addons/dt_payment_alma/models/payment_provider.py:0
+msgid "Alma create payment error (%s): %s"
+msgstr "Erreur de création de paiement Alma (%s) : %s"
+
+#. module: dt_payment_alma
+#. odoo-python
+#: code:addons/dt_payment_alma/models/payment_transaction.py:0
+msgid "Alma did not return a checkout URL"
+msgstr "Alma n'a pas retourné d'URL de paiement"
+
+#. module: dt_payment_alma
+#. odoo-python
+#: code:addons/dt_payment_alma/models/payment_provider.py:0
+msgid "Alma eligibility error (%s): %s"
+msgstr "Erreur d'éligibilité Alma (%s) : %s"
+
+#. module: dt_payment_alma
+#. odoo-python
+#: code:addons/dt_payment_alma/models/payment_provider.py:0
+msgid "Alma fetch payment error (%s): %s"
+msgstr "Erreur de récupération de paiement Alma (%s) : %s"
+
+#. module: dt_payment_alma
+#. odoo-python
+#: code:addons/dt_payment_alma/models/payment_provider.py:0
+msgid "Alma merchants/me error (%s): %s"
+msgstr "Erreur Alma merchants/me (%s) : %s"
+
+#. module: dt_payment_alma
+#. odoo-python
+#: code:addons/dt_payment_alma/models/payment_provider.py:0
+msgid "Alma network error: %s"
+msgstr "Erreur réseau Alma : %s"
+
+#. module: dt_payment_alma
+#. odoo-python
+#: code:addons/dt_payment_alma/models/payment_provider.py:0
+msgid "Alma payment_id is missing."
+msgstr "L'identifiant de paiement Alma est manquant."
+
+#. module: dt_payment_alma
+#. odoo-python
+#: code:addons/dt_payment_alma/models/payment_method.py:0
+msgid "Alma provider not configured."
+msgstr "Fournisseur Alma non configuré."
+
+#. module: dt_payment_alma
+#: model_terms:ir.ui.view,arch_db:dt_payment_alma.alma_unavailable_message
+msgid "Cart is not eligible for Alma payment."
+msgstr "Le panier n'est pas éligible au paiement Alma."
+
+#. module: dt_payment_alma
+#: model:ir.model.fields,field_description:dt_payment_alma.field_payment_provider__code
+msgid "Code"
+msgstr "Code"
+
+#. module: dt_payment_alma
+#: model:ir.model.fields,field_description:dt_payment_alma.field_payment_method__description
+msgid "Description"
+msgstr "Description"
+
+#. module: dt_payment_alma
+#: model:ir.model.fields,field_description:dt_payment_alma.field_payment_provider__alma_excluded_public_categ_ids
+msgid "Excluded Categories"
+msgstr "Catégories exclues"
+
+#. module: dt_payment_alma
+#: model:payment.method,description:dt_payment_alma.payment_method_alma_12x
+#: model:payment.method,description:dt_payment_alma.payment_method_alma_1x
+#: model:payment.method,description:dt_payment_alma.payment_method_alma_2x
+#: model:payment.method,description:dt_payment_alma.payment_method_alma_3x
+#: model:payment.method,description:dt_payment_alma.payment_method_alma_4x
+#: model:payment.method,description:dt_payment_alma.payment_method_alma_6x
+#: model:payment.method,description:dt_payment_alma.payment_method_alma_8x
+msgid "Fast and secure payment by credit card"
+msgstr "Paiement rapide et sécurisé par carte bancaire"
+
+#. module: dt_payment_alma
+#: model:ir.model.fields,help:dt_payment_alma.field_payment_provider__alma_excluded_public_categ_ids
+msgid "Hide this payment method when these categories are in the cart."
+msgstr "Masquer ce moyen de paiement lorsque ces catégories sont dans le panier."
+
+#. module: dt_payment_alma
+#: model:ir.model.fields,help:dt_payment_alma.field_payment_provider__alma_show_unavailable_message
+msgid ""
+"If checked, a message is displayed when Alma payment is unavailable due to "
+"excluded categories."
+msgstr ""
+"Si coché, un message est affiché lorsque le paiement Alma est indisponible "
+"en raison de catégories exclues."
+
+#. module: dt_payment_alma
+#: model_terms:ir.ui.view,arch_db:dt_payment_alma.payment_alma_method_form
+msgid "Included fees:"
+msgstr "Frais inclus :"
+
+#. module: dt_payment_alma
+#. odoo-python
+#: code:addons/dt_payment_alma/models/payment_method.py:0
+msgid "Invalid purchase_amount: %s"
+msgstr "Montant d'achat invalide : %s"
+
+#. module: dt_payment_alma
+#: model_terms:ir.ui.view,arch_db:dt_payment_alma.alma_unavailable_message
+msgid "Invoice is not eligible for Alma payment."
+msgstr "La facture n'est pas éligible au paiement Alma."
+
+#. module: dt_payment_alma
+#: model:ir.model.fields,field_description:dt_payment_alma.field_payment_method__is_alma_general
+msgid "Is Alma General"
+msgstr "Est Alma Général"
+
+#. module: dt_payment_alma
+#: model:ir.model.fields,field_description:dt_payment_alma.field_payment_method__is_alma
+msgid "Is Alma Provider"
+msgstr "Est un fournisseur Alma"
+
+#. module: dt_payment_alma
+#: model:ir.model.fields,field_description:dt_payment_alma.field_payment_method__is_pay_now
+msgid "Is Pay Now"
+msgstr "Est Payer maintenant"
+
+#. module: dt_payment_alma
+#: model:ir.model.fields,field_description:dt_payment_alma.field_payment_provider__alma_live_api_key
+msgid "Live API key"
+msgstr "Clé API de production"
+
+#. module: dt_payment_alma
+#: model:ir.model.fields,field_description:dt_payment_alma.field_payment_method__maximum_amount
+msgid "Maximum Amount"
+msgstr "Montant maximum"
+
+#. module: dt_payment_alma
+#: model:ir.model.fields,field_description:dt_payment_alma.field_payment_provider__alma_merchant_id
+msgid "Merchant Id"
+msgstr "Identifiant du marchand"
+
+#. module: dt_payment_alma
+#: model:ir.model.fields,field_description:dt_payment_alma.field_payment_provider__alma_merchant_name
+msgid "Merchant Name"
+msgstr "Nom du marchand"
+
+#. module: dt_payment_alma
+#: model:ir.model.fields,help:dt_payment_alma.field_payment_provider__alma_unavailable_message
+msgid "Message displayed when this payment method is unavailable."
+msgstr "Message affiché lorsque ce moyen de paiement est indisponible."
+
+#. module: dt_payment_alma
+#: model:ir.model.fields,field_description:dt_payment_alma.field_payment_method__minimum_amount
+msgid "Minimum Amount"
+msgstr "Montant minimum"
+
+#. module: dt_payment_alma
+#. odoo-python
+#: code:addons/dt_payment_alma/models/payment_transaction.py:0
+msgid "Missing Alma payment id (pid)."
+msgstr "Identifiant de paiement Alma (pid) manquant."
+
+#. module: dt_payment_alma
+#: model:ir.model.fields,field_description:dt_payment_alma.field_payment_method__installments_count
+msgid "Number of installments"
+msgstr "Nombre d'échéances"
+
+#. module: dt_payment_alma
+#: model_terms:ir.ui.view,arch_db:dt_payment_alma.alma_unavailable_message
+msgid "Order is not eligible for Alma payment."
+msgstr "La commande n'est pas éligible au paiement Alma."
+
+#. module: dt_payment_alma
+#: model:payment.method,name:dt_payment_alma.payment_method_alma_1x
+msgid "Pay by credit card"
+msgstr "Payer par carte bancaire"
+
+#. module: dt_payment_alma
+#: model:payment.method,name:dt_payment_alma.payment_method_alma_12x
+msgid "Pay in 12 installments"
+msgstr "Payer en 12 fois"
+
+#. module: dt_payment_alma
+#: model:payment.method,name:dt_payment_alma.payment_method_alma_2x
+msgid "Pay in 2 installments"
+msgstr "Payer en 2 fois"
+
+#. module: dt_payment_alma
+#: model:payment.method,name:dt_payment_alma.payment_method_alma_3x
+msgid "Pay in 3 installments"
+msgstr "Payer en 3 fois"
+
+#. module: dt_payment_alma
+#: model:payment.method,name:dt_payment_alma.payment_method_alma_4x
+msgid "Pay in 4 installments"
+msgstr "Payer en 4 fois"
+
+#. module: dt_payment_alma
+#: model:payment.method,name:dt_payment_alma.payment_method_alma_6x
+msgid "Pay in 6 installments"
+msgstr "Payer en 6 fois"
+
+#. module: dt_payment_alma
+#: model:payment.method,name:dt_payment_alma.payment_method_alma_8x
+msgid "Pay in 8 installments"
+msgstr "Payer en 8 fois"
+
+#. module: dt_payment_alma
+#: model:payment.method,description:dt_payment_alma.payment_method_alma_general
+msgid "Pay now or in installments with Alma"
+msgstr "Payez maintenant ou en plusieurs fois avec Alma"
+
+#. module: dt_payment_alma
+#: model:payment.method,name:dt_payment_alma.payment_method_alma_general
+msgid "Pay with Alma"
+msgstr "Payer avec Alma"
+
+#. module: dt_payment_alma
+#: model:ir.model,name:dt_payment_alma.model_payment_method
+msgid "Payment Method"
+msgstr "Moyen de paiement"
+
+#. module: dt_payment_alma
+#: model:ir.model,name:dt_payment_alma.model_payment_provider
+msgid "Payment Provider"
+msgstr "Fournisseur de paiement"
+
+#. module: dt_payment_alma
+#: model:ir.model,name:dt_payment_alma.model_payment_transaction
+msgid "Payment Transaction"
+msgstr "Transaction de paiement"
+
+#. module: dt_payment_alma
+#: model_terms:ir.ui.view,arch_db:dt_payment_alma.alma_unavailable_message
+msgid "Product is not eligible for Alma payment."
+msgstr "Le produit n'est pas éligible au paiement Alma."
+
+#. module: dt_payment_alma
+#: model:ir.model.fields,field_description:dt_payment_alma.field_payment_provider__alma_show_unavailable_message
+msgid "Show Unavailable Message"
+msgstr "Afficher le message d'indisponibilité"
+
+#. module: dt_payment_alma
+#: model:payment.provider,alma_unavailable_message:dt_payment_alma.payment_provider_alma
+msgid "Some products cannot be paid with monthly or deferred installments"
+msgstr "Certains produits ne peuvent pas être payés en plusieurs fois ou en différé"
+
+#. module: dt_payment_alma
+#: model:ir.model.fields,field_description:dt_payment_alma.field_payment_provider__alma_test_api_key
+msgid "Test API key "
+msgstr "Clé API de test "
+
+#. module: dt_payment_alma
+#. odoo-python
+#: code:addons/dt_payment_alma/models/payment_method.py:0
+msgid "The maximum amount must be greater than the minimum amount."
+msgstr "Le montant maximum doit être supérieur au montant minimum."
+
+#. module: dt_payment_alma
+#: model:ir.model.fields,help:dt_payment_alma.field_payment_provider__code
+msgid "The technical code of this payment provider."
+msgstr "Le code technique de ce fournisseur de paiement."
+
+#. module: dt_payment_alma
+#: model:ir.model.fields,field_description:dt_payment_alma.field_payment_provider__alma_unavailable_message
+msgid "Unavailable Message"
+msgstr "Message d'indisponibilité"
+
+#. module: dt_payment_alma
+#. odoo-python
+#: code:addons/dt_payment_alma/models/payment_provider.py:0
+msgid "Unknown Merchant"
+msgstr "Marchand inconnu"
+
+#. module: dt_payment_alma
+#. odoo-python
+#: code:addons/dt_payment_alma/models/payment_transaction.py:0
+msgid "Unrecognized response received from the payment provider."
+msgstr "Réponse non reconnue reçue du fournisseur de paiement."
+
+#. module: dt_payment_alma
+#: model_terms:payment.provider,cancel_msg:dt_payment_alma.payment_provider_alma
+msgid "Votre paiement a été annulé."
+msgstr "Votre paiement a été annulé."
+
+#. module: dt_payment_alma
+#: model_terms:payment.provider,auth_msg:dt_payment_alma.payment_provider_alma
+msgid "Votre paiement a été autorisé."
+msgstr "Votre paiement a été autorisé."
+
+#. module: dt_payment_alma
+#: model_terms:payment.provider,pending_msg:dt_payment_alma.payment_provider_alma
+msgid ""
+"Votre paiement a été traité avec succès mais est en attente de validation."
+msgstr ""
+"Votre paiement a été traité avec succès mais est en attente de validation."
+
+#. module: dt_payment_alma
+#: model_terms:payment.provider,done_msg:dt_payment_alma.payment_provider_alma
+msgid "Votre paiement a été traité avec succès."
+msgstr "Votre paiement a été traité avec succès."
+
+#. module: dt_payment_alma
+#: model:ir.model,name:dt_payment_alma.model_website
+msgid "Website"
+msgstr "Site web"

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_invoice_document_custom"
+              inherit_id="account.report_invoice_document">
+
+        <xpath expr="//div[hasclass('row')][1]" position="replace">
+            <div class="row mb-3">
+                <div class="col-6">
+                    <strong class="d-block" t-field="o.company_id.name"/>
+                    <div t-if="o.company_id.vat">
+                        <strong>NIF : </strong><span t-field="o.company_id.vat"/>
+                    </div>
+                    <div t-if="o.company_id.company_registry">
+                        <strong>STAT : </strong><span t-field="o.company_id.company_registry"/>
+                    </div>
+                </div>
+                <div class="col-6 text-end">
+                    <address class="mb-0" t-field="o.partner_id"
+                             t-options='{"widget": "contact", "fields": ["name"], "no_marker": true}'/>
+                    <div t-if="o.partner_id.cin">
+                        <strong>CIN : </strong><span t-field="o.partner_id.cin"/>
+                    </div>
+                    <div t-if="o.partner_id.phone">
+                        <strong>Tél : </strong><span t-field="o.partner_id.phone"/>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+        <!-- TOTAUX : remplace le tableau natif -->
+        <xpath expr="//div[@id='total']//table[hasclass('o_total_table')]" position="replace">
+            <table class="o_total_table table table-borderless avoid-page-break-inside">
+                <t t-set="x_sale_order" t-value="o.invoice_line_ids.mapped('sale_line_ids.order_id')[:1]"/>
+                <t t-set="x_avance" t-value="x_sale_order.amount_invoiced if x_sale_order else 0"/>
+                <t t-set="x_reste"  t-value="x_sale_order.amount_total - x_avance if x_sale_order else o.amount_total"/>
+                <tr>
+                    <td>Prix total</td>
+                    <td class="text-end text-nowrap">
+                        <span t-field="o.amount_total"
+                              t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Avance versée</td>
+                    <td class="text-end text-nowrap">
+                        <span t-out="x_avance"
+                              t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                    </td>
+                </tr>
+                <tr class="fw-bold" style="border-top: 2px solid #dee2e6;">
+                    <td>Reste à payer</td>
+                    <td class="text-end text-nowrap">
+                        <span t-out="x_reste"
+                              t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
+                    </td>
+                </tr>
+            </table>
+        </xpath>
+
+    </template>
+</odoo>
