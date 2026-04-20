@@ -6,6 +6,17 @@ from markupsafe import Markup
 class StockPicking(models.Model):
     _inherit = 'stock.picking'
 
+    can_validate = fields.Boolean(compute='_compute_can_validate')
+
+    def _compute_can_validate(self):
+        has_admin = self.env.user.has_groups('stock.group_stock_manager')
+        for picking in self:
+            if has_admin or self.env.user.id in picking.company_id.inventory_validator_ids.ids:
+                picking.can_validate = True
+            else:
+                picking.can_validate = False
+
+
     def get_picking_link(self):
         base_url = self.env['ir.config_parameter'].sudo().get_param('web.base.url')
         action = self.sudo().env.ref('stock.action_picking_tree_incoming').path

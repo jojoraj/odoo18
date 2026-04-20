@@ -7,7 +7,8 @@
     'category': 'Inventory',
     'depends': ['stock'],
     'data': [
-        'views/stock_picking_views.xml'
+        'views/stock_picking_views.xml',
+        'views/res_company_views.xml'
     ],
     'installable': True,
     'application': False,
